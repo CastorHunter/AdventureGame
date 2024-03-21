@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 2968193}
   - component: {fileID: 2968192}
   - component: {fileID: 2968194}
+  - component: {fileID: 2968195}
   m_Layer: 20
   m_Name: PortailChemin
   m_TagString: Untagged
@@ -253,6 +254,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2968195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2968191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811cf39549f645845a804aecbed4a480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bc2D: {fileID: 2968194}
 --- !u!1 &397676091
 GameObject:
   m_ObjectHideFlags: 0

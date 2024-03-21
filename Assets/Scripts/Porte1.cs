@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Porte1 : MonoBehaviour
 {
+    public BoxCollider2D bc2D;
     // Start is called before the first frame update
     void Start()
     {
