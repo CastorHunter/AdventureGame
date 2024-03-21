@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 2968193}
   - component: {fileID: 2968192}
   - component: {fileID: 2968194}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: PortailChemin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
