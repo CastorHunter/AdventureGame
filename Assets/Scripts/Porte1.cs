@@ -19,7 +19,7 @@ public class Porte1 : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.IsTouchingLayers(13))
+        if (other.CompareTag("Player"))
         {
             SceneManager.LoadScene(1);
         }
