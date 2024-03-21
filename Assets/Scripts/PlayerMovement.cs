@@ -9,8 +9,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 change;
     public Transform weapon;
     public float offset;
-    public BoxCollider2D bc2d1; //Suite chemin1
-    public BoxCollider2D bc2d2; //Retour chemin1
 
     // Start is called before the first frame update
     void Start()

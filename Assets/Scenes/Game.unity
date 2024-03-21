@@ -594,7 +594,7 @@ GameObject:
   - component: {fileID: 1922606810}
   m_Layer: 13
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -709,8 +709,6 @@ MonoBehaviour:
   speed: 0.1
   weapon: {fileID: 1150447631}
   offset: -60
-  bc2d1: {fileID: 2968194}
-  bc2d2: {fileID: 0}
 --- !u!58 &1922606810
 CircleCollider2D:
   m_ObjectHideFlags: 0
