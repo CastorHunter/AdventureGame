@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -41,17 +40,6 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.MovePosition(
             transform.position + change * speed
         );
-    }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.IsTouchingLayers(20))
-        {
-            SceneManager.LoadScene(1);
-        }
-        if (other.IsTouchingLayers(21))
-        {
-            SceneManager.LoadScene(2);
-        }
     }
 }
 
