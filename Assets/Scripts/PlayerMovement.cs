@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,11 +10,14 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 change;
     public Transform weapon;
     public float offset;
+    public BoxCollider2D bc2d1; //Suite chemin1
+    public BoxCollider2D bc2d2; //Retour chemin1
 
     // Start is called before the first frame update
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
+        DontDestroyOnLoad(this);
     }
 
     // Update is called once per frame
@@ -38,5 +42,17 @@ public class PlayerMovement : MonoBehaviour
             transform.position + change * speed
         );
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.IsTouchingLayers(20))
+        {
+            SceneManager.LoadScene(1);
+        }
+        if (other.IsTouchingLayers(21))
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
 }
+
 

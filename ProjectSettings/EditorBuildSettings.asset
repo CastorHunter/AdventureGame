@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Chemin.unity
+    guid: 18f95ced7f91ad24998b4f407eb3722a
+  - enabled: 1
+    path: Assets/Scenes/FauxDebut.unity
+    guid: 7c9829d302503904f9c874d43868a52e
   m_configObjects: {}
