@@ -2,33 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class EnemyScript : MonoBehaviour
 {
+    public bool followingPlayer;
     public float speed;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     public Transform weapon;
     public float offset;
-
-    // Start is called before the first frame update
     void Start()
     {
-        myRigidbody = GetComponent<Rigidbody2D>();
-        DontDestroyOnLoad(this);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        if (other.CompareTag("Player"))
+        {
         change = Vector3.zero;
-        change.x = Input.GetAxisRaw("Horizontal");
-        change.y = Input.GetAxisRaw("Vertical");
+        change.x = 1;
+        change.y = 1;
         if (change != Vector3.zero)
         {
+            Debug.Log(change);
             MoveCharacter();
         }
-        //Debug.Log(change); //pour debug
-
+        }
+    }
+    void Update()
+    {
         Vector3 displacement = weapon.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float angle = - Mathf.Atan2(displacement.x, displacement.y) * Mathf.Rad2Deg;
         weapon.rotation = Quaternion.Euler(0, 0, angle + offset);
@@ -39,6 +36,18 @@ public class PlayerMovement : MonoBehaviour
             transform.position + change * speed
         );
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+        change = Vector3.zero;
+        change.x = 1;
+        change.y = 1;
+        if (change != Vector3.zero)
+        {
+            Debug.Log(change);
+            MoveCharacter();
+        }
+        }
+    }
 }
-
-
