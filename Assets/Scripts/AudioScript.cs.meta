@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: c4aca8ac3fc9fdc4b9aa0098866dc481
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - TLaugh: {fileID: 8300000, guid: b791ff2326eb6c849a22bdc67a259f52, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

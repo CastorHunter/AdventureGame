@@ -9,12 +9,17 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 change;
     public Transform weapon;
     public float offset;
+    public GameObject Sword;
+    public GameObject Shield;
+    public GameObject SwordLook;
+    private GameObject ActualWeapon;
 
     // Start is called before the first frame update
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         DontDestroyOnLoad(this);
+        ChangeSword();
     }
 
     // Update is called once per frame
@@ -27,6 +32,16 @@ public class PlayerMovement : MonoBehaviour
         {
             MoveCharacter();
         }
+
+        if (Input.GetKey("q"))
+        {
+            ChangeSword();
+        }
+
+        if (Input.GetKey("e"))
+        {
+            ChangeShield();
+        }
         //Debug.Log(change); //pour debug
 
         Vector3 displacement = weapon.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -38,6 +53,20 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.MovePosition(
             transform.position + change * speed
         );
+    }
+    void ChangeSword()
+    {
+        Shield.SetActive(false);
+        SwordLook.SetActive(true);
+        ActualWeapon = Sword;
+        weapon = ActualWeapon.transform;
+    }
+    void ChangeShield()
+    {
+        SwordLook.SetActive(false);
+        Shield.SetActive(true);
+        ActualWeapon = Shield;
+        weapon = ActualWeapon.transform;
     }
 }
 
