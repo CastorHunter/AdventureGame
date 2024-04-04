@@ -10,7 +10,7 @@ public class IsDestroyedBySword : MonoBehaviour
     private void Update()
     {
     }
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) // est détruit si touche un sprite possédant le tag "Sword"
     {
         if (other.CompareTag("Sword"))
         {

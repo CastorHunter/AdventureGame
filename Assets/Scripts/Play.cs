@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Play : MonoBehaviour
 {
-    void Start()
+    void Start() //Lance la scène 1
     {
         SceneManager.LoadScene(1);
     }
