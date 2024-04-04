@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Porte1 : MonoBehaviour
 {
-    public BoxCollider2D bc2D;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

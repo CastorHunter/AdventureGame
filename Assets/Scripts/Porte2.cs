@@ -5,12 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Porte2 : MonoBehaviour
 {
-    public BoxCollider2D bc2D;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
     }
 }

@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         DontDestroyOnLoad(this);
         ChangeSword();
+        SwordLook.SetActive(false);
     }
 
     // Update is called once per frame
