@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public ProjectilesBehavior ProjectilePrefab;
     public Transform LaunchOffset;
     public AudioClip WaterSplash;
-    public float speed;
+    public float speed = 0.05F;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     public Transform weapon;
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         myRigidbody = GetComponent<Rigidbody2D>();
         DontDestroyOnLoad(this);
-        ChangeSword();
+        ChangeNothing();
         SwordLook.SetActive(false);
     }
 
@@ -46,7 +46,10 @@ public class PlayerMovement : MonoBehaviour
         {
             ChangeSword();
         }
-
+        if (Input.GetKey("t"))
+        {
+            ChangeNothing();
+        }
         if (Input.GetKey("e"))
         {
             ChangeShield();
@@ -81,6 +84,14 @@ public class PlayerMovement : MonoBehaviour
         canFire = false;
         ActualWeapon = Sword;
     }
+    void ChangeNothing()
+    {
+        Shield.SetActive(false);
+        Water.SetActive(false);
+        SwordLook.SetActive(false);
+        canFire = false;
+        ActualWeapon = Sword;
+    }
     void ChangeShield()
     {
         SwordLook.SetActive(false);
@@ -96,6 +107,20 @@ public class PlayerMovement : MonoBehaviour
         Water.SetActive(true);
         canFire = true;
         ActualWeapon = Water;
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("LakeOrRiverWater"))
+        {
+            speed = 0.01F;
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("LakeOrRiverWater"))
+        {
+            speed = 0.05F;
+        }
     }
 }
 

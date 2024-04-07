@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Porte3 : MonoBehaviour
+public class PorteHouseZone : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(2);
         }
     }
 }

@@ -7,6 +7,7 @@ TagManager:
   - Sword
   - Pray
   - NPC
+  - LakeOrRiverWater
   layers:
   - Default
   - TransparentFX
