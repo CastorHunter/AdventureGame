@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     public Transform weapon;
     public float offset;
     private bool canFire = false;
+    private bool hasSword = false;
+    private bool hasPray = true;
+    private bool hasWater = false;
     public GameObject Sword;
     public GameObject Shield;
     public GameObject SwordLook;
@@ -42,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
             MoveCharacter();
         }
 
-        if (Input.GetKey("q"))
+        if (Input.GetKey("q") && hasSword == true)
         {
             ChangeSword();
         }
@@ -50,11 +53,11 @@ public class PlayerMovement : MonoBehaviour
         {
             ChangeNothing();
         }
-        if (Input.GetKey("e"))
+        if (Input.GetKey("e") && hasPray == true)
         {
             ChangeShield();
         }
-        if (Input.GetKey("r"))
+        if (Input.GetKey("r") && hasWater == true)
         {
             ChangeWater();
         }
@@ -120,6 +123,18 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("LakeOrRiverWater"))
         {
             speed = 0.05F;
+        }
+        if (other.CompareTag("GetSword"))
+        {
+            hasSword = true;
+        }
+        if (other.CompareTag("GetWater"))
+        {
+            hasWater = true;
+        }
+        if (other.CompareTag("GetPray"))
+        {
+            hasPray = true;
         }
     }
 }

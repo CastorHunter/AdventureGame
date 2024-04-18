@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/HouseZone.unity
     guid: 18f95ced7f91ad24998b4f407eb3722a
   - enabled: 1
-    path: Assets/Scenes/FauxDebut.unity
+    path: Assets/Scenes/FalseHouse.unity
     guid: 7c9829d302503904f9c874d43868a52e
   - enabled: 1
     path: Assets/Scenes/Zone1.unity
@@ -36,27 +36,27 @@ EditorBuildSettings:
     path: Assets/Scenes/House2.unity
     guid: a5e6739b22434ba4bb7a41fb6e9b7159
   - enabled: 1
-    path: Assets/Scenes/Zone3.unity
+    path: Assets/Scenes/FlowerZone.unity
     guid: da4215db3c2f93d4e8ac8e05abb3fa51
   - enabled: 1
-    path: Assets/Scenes/SacretGrove.unity
+    path: Assets/Scenes/Zone3.unity
     guid: 1c997e8094524614699aa34a54269080
-  - enabled: 1
-    path: Assets/Scenes/Zone4.unity
-    guid: b7b15c3d2b9e35f4fba124f1d98706af
   - enabled: 1
     path: Assets/Scenes/ZoneTomb.unity
     guid: 9996dd6292cf5a2488300d9078895ec5
   - enabled: 1
-    path: Assets/Scenes/CamilleTomb.unity
+    path: Assets/Scenes/KrysseTomb.unity
     guid: 6ef1af0d835f06b4882dd5b93fe67a49
   - enabled: 1
-    path: Assets/Scenes/Zone5.unity
-    guid: 6c9a99f5e3405fa49a2ccafbefe6aac5
+    path: Assets/Scenes/FalseZoneTomb.unity
+    guid: 30e286ec1e71a8446a3f41045691dfef
   - enabled: 1
     path: Assets/Scenes/Pit.unity
     guid: daeb3ddb0f3020b4a9a1a970c74bc73b
   - enabled: 1
     path: Assets/Scenes/ZoneBoss.unity
     guid: a0c4069358d8fab40803f7809856f753
+  - enabled: 1
+    path: Assets/Scenes/InsideChurch.unity
+    guid: abd6c809ba65ac142b3becf68b5d37a1
   m_configObjects: {}

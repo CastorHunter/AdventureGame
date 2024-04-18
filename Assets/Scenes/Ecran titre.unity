@@ -1418,8 +1418,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb8afdfce43149c49a413b2e30417cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifebar2pv: {fileID: 325671460}
-  lifebar3pv: {fileID: 718178420}
+  maxHealth: 6
+  currentHealth: 0
+  canbedamaged: 1
+  respawnPoint: {fileID: 0}
+  LifeBar1: {fileID: 724982059}
+  LifeBar2: {fileID: 325671460}
+  LifeBar3: {fileID: 718178420}
 --- !u!1 &2161551008172455576
 GameObject:
   m_ObjectHideFlags: 0
