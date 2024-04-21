@@ -6,6 +6,7 @@ public class LifeModes : MonoBehaviour
 {
     public GameObject otherMode;
     public GameObject LifeBar;
+    public bool LifeMode = false;
     // Start is called before the first frame update
     void Start()
     {

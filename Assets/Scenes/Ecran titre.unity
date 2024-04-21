@@ -929,6 +929,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724982059}
   m_CullTransparentMesh: 1
+--- !u!1 &1165484486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1165484488}
+  - component: {fileID: 1165484487}
+  m_Layer: 0
+  m_Name: LifeSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1165484487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165484486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030b07e8f21517242a21a29b3257fe5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherMode: {fileID: 330473449}
+  LifeBar: {fileID: 2161551008172455576}
+  LifeMode: 0
+--- !u!4 &1165484488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165484486}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 544.6785, y: 265.92346, z: -4.669772}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1356845132
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,7 +987,6 @@ GameObject:
   - component: {fileID: 1356845133}
   - component: {fileID: 1356845135}
   - component: {fileID: 1356845134}
-  - component: {fileID: 1356845136}
   m_Layer: 5
   m_Name: RealMode
   m_TagString: Untagged
@@ -1005,20 +1051,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356845132}
   m_CullTransparentMesh: 1
---- !u!114 &1356845136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356845132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 030b07e8f21517242a21a29b3257fe5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  otherMode: {fileID: 330473449}
-  LifeBar: {fileID: 2161551008172455576}
 --- !u!1 &1543333072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,25 +1438,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023370919}
   m_CullTransparentMesh: 1
---- !u!114 &345640337582543090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2161551008172455576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb8afdfce43149c49a413b2e30417cae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 6
-  currentHealth: 0
-  canbedamaged: 1
-  respawnPoint: {fileID: 0}
-  LifeBar1: {fileID: 724982059}
-  LifeBar2: {fileID: 325671460}
-  LifeBar3: {fileID: 718178420}
 --- !u!1 &2161551008172455576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,7 +1447,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5708666143745734668}
-  - component: {fileID: 345640337582543090}
   - component: {fileID: 5708666143745734669}
   m_Layer: 0
   m_Name: LifeBar
@@ -1481,3 +1493,4 @@ SceneRoots:
   - {fileID: 1609360493}
   - {fileID: 538647551}
   - {fileID: 451137499}
+  - {fileID: 1165484488}

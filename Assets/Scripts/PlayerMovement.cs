@@ -1,25 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     public ProjectilesBehavior ProjectilePrefab;
     public Transform LaunchOffset;
+    private Vector3 CheckpointLocation;
     public AudioClip WaterSplash;
     public float speed = 0.05F;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     public Transform weapon;
+    public Transform swordcenter;
     public float offset;
+    private int scene;
+    // 1 : HouseZone
+    // 2 : Village
+    // 3 : Zone3
+    // 4 : KrysseTomb
+    // 5 : Church
     private bool canFire = false;
     private bool hasSword = false;
-    private bool hasPray = true;
+    private bool hasPray = false;
     private bool hasWater = false;
+    private bool Life = false;
+    private int pv = 3;
     public GameObject Sword;
     public GameObject Shield;
+    public GameObject LifeSystem;
     public GameObject SwordLook;
     public GameObject Water;
+    private GameObject ActualCheckPoint;
     private GameObject ActualWeapon;
 
     AudioSource audioSource;
@@ -32,6 +45,9 @@ public class PlayerMovement : MonoBehaviour
         DontDestroyOnLoad(this);
         ChangeNothing();
         SwordLook.SetActive(false);
+        LifeModes life = LifeSystem.GetComponent<LifeModes>(); // Obtient une référence au script de la gestion de points de vie
+        Life = life.LifeMode;
+
     }
 
     // Update is called once per frame
@@ -66,6 +82,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 displacement = weapon.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float angle = - Mathf.Atan2(displacement.x, displacement.y) * Mathf.Rad2Deg;
         weapon.rotation = Quaternion.Euler(0, 0, angle + offset);
+
+        swordcenter.rotation = weapon.rotation;
 
         if(Input.GetButtonDown("Fire1") && canFire == true){
             audioSource.PlayOneShot(WaterSplash, 0.7F);
@@ -117,13 +135,6 @@ public class PlayerMovement : MonoBehaviour
         {
             speed = 0.01F;
         }
-    }
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("LakeOrRiverWater"))
-        {
-            speed = 0.05F;
-        }
         if (other.CompareTag("GetSword"))
         {
             hasSword = true;
@@ -136,6 +147,78 @@ public class PlayerMovement : MonoBehaviour
         {
             hasPray = true;
         }
+        if (other.CompareTag("Enemy"))
+        {
+            if (Life == true)
+            {
+                pv = pv -1;
+            }
+            else
+            {
+                Die();
+            }
+        }
+        if (other.CompareTag("Checkpoint1"))//HouseZone
+        {
+            ActualCheckPoint = other.gameObject;
+            CheckpointLocation = ActualCheckPoint.transform.position;
+            scene = 1;
+        }
+        if (other.CompareTag("Checkpoint2"))//Village
+        {
+            ActualCheckPoint = other.gameObject;
+            CheckpointLocation = ActualCheckPoint.transform.position;
+            scene = 2;
+        }
+        if (other.CompareTag("Checkpoint3"))//Zone3
+        {
+            ActualCheckPoint = other.gameObject;
+            CheckpointLocation = ActualCheckPoint.transform.position;
+            scene = 3;
+        }
+        if (other.CompareTag("Checkpoint4"))//KrysseTombe
+        {
+            ActualCheckPoint = other.gameObject;
+            CheckpointLocation = ActualCheckPoint.transform.position;
+            scene = 4;
+        }
+        if (other.CompareTag("Checkpoint5"))//Church
+        {
+            ActualCheckPoint = other.gameObject;
+            CheckpointLocation = ActualCheckPoint.transform.position;
+            scene = 5;
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("LakeOrRiverWater"))
+        {
+            speed = 0.05F;
+        }
+    }
+    void Die()
+    {
+        if(scene == 1)//HouseZone
+        {
+            SceneManager.LoadScene(2);
+        }
+        if(scene == 2)//Village
+        {
+            SceneManager.LoadScene(7);
+        }
+        if(scene == 3)//Zone3
+        {
+            SceneManager.LoadScene(11);
+        }
+        if(scene == 4)//KrysseTombe
+        {
+            SceneManager.LoadScene(13);
+        }
+        if(scene == 5)//Church
+        {
+            SceneManager.LoadScene(5);
+        }
+        transform.position = CheckpointLocation;
     }
 }
 
