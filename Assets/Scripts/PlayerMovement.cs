@@ -26,12 +26,15 @@ public class PlayerMovement : MonoBehaviour
     private bool hasPray = false;
     private bool hasWater = false;
     private bool Life = false;
-    private int pv = 3;
+    private int pv = 6;
     public GameObject Sword;
     public GameObject Shield;
-    public GameObject LifeSystem;
     public GameObject SwordLook;
     public GameObject Water;
+    private GameObject LifeSystem;
+    private GameObject LifeBar1;
+    private GameObject LifeBar2;
+    private GameObject LifeBar3;
     private GameObject ActualCheckPoint;
     private GameObject ActualWeapon;
 
@@ -45,9 +48,12 @@ public class PlayerMovement : MonoBehaviour
         DontDestroyOnLoad(this);
         ChangeNothing();
         SwordLook.SetActive(false);
+        LifeBar1 = GameObject.Find("Life1/3");
+        LifeBar2 = GameObject.Find("Life2/3");
+        LifeBar3 = GameObject.Find("Life3/3");
+        LifeSystem = GameObject.Find("LifeSystem");
         LifeModes life = LifeSystem.GetComponent<LifeModes>(); // Obtient une référence au script de la gestion de points de vie
         Life = life.LifeMode;
-
     }
 
     // Update is called once per frame
@@ -88,6 +94,24 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Fire1") && canFire == true){
             audioSource.PlayOneShot(WaterSplash, 0.7F);
             Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
+        }
+        if(pv == 6)
+        {
+            LifeBar1.SetActive(true);
+            LifeBar2.SetActive(true);
+            LifeBar3.SetActive(true);
+        }
+        if(pv < 6)
+        {
+            LifeBar3.SetActive(false);
+        }
+        if(pv < 4)
+        {
+            LifeBar2.SetActive(false);
+        }
+        if(pv < 2)
+        {
+            LifeBar1.SetActive(false);
         }
     }
     void MoveCharacter()
@@ -149,13 +173,16 @@ public class PlayerMovement : MonoBehaviour
         }
         if (other.CompareTag("Enemy"))
         {
-            if (Life == true)
+            if (Life == true && pv > 0)
             {
+                this.GetComponent<Collider2D>().enabled = false;
                 pv = pv -1;
+                Invoke("recreateCollider", 2.0f);
             }
             else
             {
                 Die();
+                pv = 6;
             }
         }
         if (other.CompareTag("Checkpoint1"))//HouseZone
@@ -219,6 +246,10 @@ public class PlayerMovement : MonoBehaviour
             SceneManager.LoadScene(5);
         }
         transform.position = CheckpointLocation;
+    }
+    void recreateCollider()
+    {
+        this.GetComponent<Collider2D>().enabled = true;
     }
 }
 

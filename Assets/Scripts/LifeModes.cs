@@ -21,12 +21,14 @@ public class LifeModes : MonoBehaviour
         {
             otherMode.SetActive(false);
             LifeBar.SetActive(false);
+            LifeMode = false;
         }
 
         if (Input.GetKey("e"))
         {
             otherMode.SetActive(true);
             LifeBar.SetActive(true);
+            LifeMode = true;
         }
     }
 }
