@@ -5,13 +5,17 @@ using UnityEngine;
 public class LifeModes : MonoBehaviour
 {
     public GameObject otherMode;
+    public GameObject otherControl;
     public GameObject LifeBar;
     public bool LifeMode = false;
+    public bool Clavier = true;
     // Start is called before the first frame update
     void Start()
     {
         otherMode.SetActive(false);
         LifeBar.SetActive(false);
+        otherControl.SetActive(true);
+        Clavier = true;
     }
 
     // Update is called once per frame
@@ -29,6 +33,18 @@ public class LifeModes : MonoBehaviour
             otherMode.SetActive(true);
             LifeBar.SetActive(true);
             LifeMode = true;
+        }
+
+        if (Input.GetKey("r"))
+        {
+            otherControl.SetActive(false);
+            Clavier = false;
+        }
+
+        if (Input.GetKey("t"))
+        {
+            otherControl.SetActive(true);
+            Clavier = true;
         }
     }
 }

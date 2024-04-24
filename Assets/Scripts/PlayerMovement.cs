@@ -24,9 +24,10 @@ public class PlayerMovement : MonoBehaviour
     // 5 : Church
     private bool canFire = false;
     private bool hasSword = false;
-    private bool hasPray = false;
-    private bool hasWater = false;
+    private bool hasPray = true;
+    private bool hasWater = true;
     private bool Life = false;
+    private bool GameMode = true;
     private int pv = 6;
     public GameObject Sword;
     public GameObject Shield;
@@ -65,17 +66,29 @@ public class PlayerMovement : MonoBehaviour
         Inventory = InventoryEmpty;//porte de Shar T-T
         LifeModes life = LifeSystem.GetComponent<LifeModes>(); // Obtient une référence au script de la gestion de points de vie
         Life = life.LifeMode;
+        LifeModes gamemode = LifeSystem.GetComponent<LifeModes>();
+        GameMode = gamemode.Clavier;
     }
 
     // Update is called once per frame
     void Update()
     {
-        change = Vector3.zero;
-        change.x = Input.GetAxisRaw("Horizontal");
-        change.y = Input.GetAxisRaw("Vertical");
-        if (change != Vector3.zero)
+        if (GameMode == true)
         {
-            MoveCharacter();
+            change = Vector3.zero;
+            change.x = Input.GetAxisRaw("Horizontal");
+            change.y = Input.GetAxisRaw("Vertical");
+            if (change != Vector3.zero)
+            {
+                MoveCharacter();
+            }
+        }
+        else
+        {
+            float moveHorizontal = Input.GetAxis("JoystickHorizontal");
+            float moveVertical = Input.GetAxis("JoystickVertical");
+            Vector3 movement = new Vector3(moveHorizontal, -moveVertical, 0.0f);
+            transform.Translate(movement * speed*50 * Time.deltaTime);
         }
 
         if (Input.GetKey("q") && hasSword == true)
@@ -90,6 +103,11 @@ public class PlayerMovement : MonoBehaviour
         {
             ChangeShield();
         }
+        // if (Input.GetKey("JoystickA"))
+        // {
+        //     Debug.Log("oulalalala");
+        //     // ChangeShield();
+        // }
         if (Input.GetKey("r") && hasWater == true)
         {
             ChangeWater();
@@ -105,11 +123,24 @@ public class PlayerMovement : MonoBehaviour
         }
         //Debug.Log(change); //pour debug
 
+        if (GameMode == true)
+        {
         Vector3 displacement = weapon.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float angle = - Mathf.Atan2(displacement.x, displacement.y) * Mathf.Rad2Deg;
         weapon.rotation = Quaternion.Euler(0, 0, angle + offset);
 
         swordcenter.rotation = weapon.rotation;
+        }
+        else
+        {
+            float moveHorizontal = Input.GetAxis("JoystickHorizontal");
+            float moveVertical = Input.GetAxis("JoystickVertical");
+            Vector3 displacement = new Vector3(-moveHorizontal, moveVertical, 0.0f);
+            float angle = - Mathf.Atan2(displacement.x, displacement.y) * Mathf.Rad2Deg;
+            weapon.rotation = Quaternion.Euler(0, 0, angle + offset);
+            swordcenter.rotation = weapon.rotation;
+        }
+
 
         if(Input.GetButtonDown("Fire1") && canFire == true){
             audioSource.PlayOneShot(WaterSplash, 0.7F);
@@ -242,6 +273,10 @@ public class PlayerMovement : MonoBehaviour
             CheckpointLocation = ActualCheckPoint.transform.position;
             scene = 5;
         }
+        if (other.CompareTag("Heart"))//Church
+        {
+            pv = 6;
+        }
     }
     void OnTriggerExit2D(Collider2D other)
     {
@@ -279,5 +314,13 @@ public class PlayerMovement : MonoBehaviour
         this.GetComponent<Collider2D>().enabled = true;
     }
 }
-
-
+// Bouton A = PB (joystick button 0) | Key or Mouse Button | Get Motion from all Joystick
+// Bouton B = PB (joystick button 1) | Key or Mouse Button | Get Motion from all Joystick
+// Bouton X = PB (joystick button 2) | Key or Mouse Button | Get Motion from all Joystick
+// Bouton Y = PB (joystick button 3) | Key or Mouse Button | Get Motion from all Joystick
+// Bouton LB = PB (joystick button 4) | Key or Mouse Button | Get Motion from all Joystick
+// Bouton RB = PB (joystick button 5) | Key or Mouse Button | Get Motion from all Joystick
+// Bouton Back = PB (joystick button 6) | Key or Mouse Button | Get Motion from all Joystick
+// Bouton Start = PB (joystick button 7) | Key or Mouse Button | Get Motion from all Joystick
+// Clic Joystick Gauche = PB (joystick button 8) | Key or Mouse Button | Get Motion from all Joystick
+// Clic Joystick Droite = PB (joystick button 9) | Key or Mouse Button | Get Motion from all Joystick

@@ -77143,6 +77143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb18ec67ecc003847a002b8fa2e6d7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HeartPrefab: {fileID: 5265185216348491388, guid: 1ccd036dcc6715c4aabd38fd5a2f2a18, type: 3}
   Enemy: {fileID: 6396974951714777570}
 --- !u!61 &6952147299811864382
 BoxCollider2D:
@@ -77201,6 +77202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb18ec67ecc003847a002b8fa2e6d7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HeartPrefab: {fileID: 5265185216348491388, guid: 1ccd036dcc6715c4aabd38fd5a2f2a18, type: 3}
   Enemy: {fileID: 6396974951739735962}
 --- !u!114 &7353641209242513109
 MonoBehaviour:
