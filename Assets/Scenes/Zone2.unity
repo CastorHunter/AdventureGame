@@ -24883,6 +24883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8925516964130296549}
   - component: {fileID: 1783252581712996371}
+  - component: {fileID: 8925516964130296550}
   - component: {fileID: 2483004728767268375}
   m_Layer: 0
   m_Name: EnemyDamager
@@ -25731,6 +25732,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 511960374886526457}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8925516964130296550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584972908325392023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb18ec67ecc003847a002b8fa2e6d7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 1930078677705905843}
 --- !u!58 &9005015768862714305
 CircleCollider2D:
   m_ObjectHideFlags: 0

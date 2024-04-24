@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
@@ -31,10 +32,19 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Shield;
     public GameObject SwordLook;
     public GameObject Water;
+    public Image InventoryEmpty;
+    public Image InventorywithPray;
+    public Image InventorywithSword;
+    public Image InventorywithWater;
+    private Image Inventory;
     private GameObject LifeSystem;
     private GameObject LifeBar1;
     private GameObject LifeBar2;
     private GameObject LifeBar3;
+    public Image HandsIcone;
+    public Image PrayIcone;
+    public Image SwordIcone;
+    public Image WaterIcone;
     private GameObject ActualCheckPoint;
     private GameObject ActualWeapon;
 
@@ -52,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         LifeBar2 = GameObject.Find("Life2/3");
         LifeBar3 = GameObject.Find("Life3/3");
         LifeSystem = GameObject.Find("LifeSystem");
+        Inventory = InventoryEmpty;//porte de Shar T-T
         LifeModes life = LifeSystem.GetComponent<LifeModes>(); // Obtient une référence au script de la gestion de points de vie
         Life = life.LifeMode;
     }
@@ -82,6 +93,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("r") && hasWater == true)
         {
             ChangeWater();
+        }
+        if (Input.GetKey("f"))
+        {
+            Debug.Log(Inventory);
+            Inventory.enabled = true;
+        }
+        else
+        {
+            Inventory.enabled = false;
         }
         //Debug.Log(change); //pour debug
 
@@ -161,15 +181,22 @@ public class PlayerMovement : MonoBehaviour
         }
         if (other.CompareTag("GetSword"))
         {
+            SwordIcone.enabled = true;
             hasSword = true;
+            Inventory = InventorywithSword;
         }
         if (other.CompareTag("GetWater"))
         {
+            WaterIcone.enabled = true;
             hasWater = true;
+            Inventory = InventorywithWater;
         }
         if (other.CompareTag("GetPray"))
         {
+            HandsIcone.enabled = true;
+            PrayIcone.enabled = true;
             hasPray = true;
+            Inventory = InventorywithPray;
         }
         if (other.CompareTag("Enemy"))
         {

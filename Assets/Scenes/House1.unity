@@ -72437,6 +72437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 688886346}
   - component: {fileID: 688886345}
+  - component: {fileID: 688886347}
   m_Layer: 0
   m_Name: pnj zzz
   m_TagString: Untagged
@@ -72511,6 +72512,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.633}
+--- !u!70 &688886347
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688886344}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.038963143, y: -0.03444213}
+  m_Size: {x: 2.119913, y: 2.1290753}
+  m_Direction: 0
 --- !u!1 &707753123
 GameObject:
   m_ObjectHideFlags: 0
@@ -73301,6 +73337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 953481839}
   - component: {fileID: 953481838}
+  - component: {fileID: 953481840}
   m_Layer: 0
   m_Name: "pnj j'esp\xE8re que \xE7a allait avec papa"
   m_TagString: Untagged
@@ -73375,6 +73412,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 169.584}
+--- !u!58 &953481840
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953481837}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.032007802, y: -0.0058837915}
+  serializedVersion: 2
+  m_Radius: 1.0639594
 --- !u!1 &964824300
 GameObject:
   m_ObjectHideFlags: 0
@@ -74188,7 +74260,7 @@ Transform:
   m_GameObject: {fileID: 1197819098}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.43, y: -52.1, z: -3}
+  m_LocalPosition: {x: 9.64, y: -51.94, z: -3}
   m_LocalScale: {x: 6.583321, y: 1.132788, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -75127,6 +75199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1550479070}
   - component: {fileID: 1550479069}
+  - component: {fileID: 1550479071}
   m_Layer: 0
   m_Name: "pnj je ne veux pas parler \xE0 ma fille de la mal\xE9diction"
   m_TagString: Untagged
@@ -75201,6 +75274,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -120}
+--- !u!58 &1550479071
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550479068}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.013193131, y: -0.022851383}
+  serializedVersion: 2
+  m_Radius: 1.0846258
 --- !u!1 &1839163613
 GameObject:
   m_ObjectHideFlags: 0
@@ -75906,6 +76014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2037576874}
   - component: {fileID: 2037576873}
+  - component: {fileID: 2037576875}
   m_Layer: 0
   m_Name: pnj viens jouer avec moi
   m_TagString: Untagged
@@ -75974,12 +76083,47 @@ Transform:
   m_GameObject: {fileID: 2037576872}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.13989767, w: 0.99016595}
-  m_LocalPosition: {x: 9.32, y: -50.51, z: -1}
+  m_LocalPosition: {x: 9.55, y: -50.31, z: -1}
   m_LocalScale: {x: 0.30715442, y: 0.30715442, z: 0.30715442}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 16.084}
+--- !u!58 &2037576875
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037576872}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.022254197, y: -0.0064165485}
+  serializedVersion: 2
+  m_Radius: 1.0834302
 --- !u!1 &2047189892
 GameObject:
   m_ObjectHideFlags: 0
@@ -76557,7 +76701,7 @@ Transform:
   m_GameObject: {fileID: 6396974951714777570}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.375747, y: -51.342808, z: -1}
+  m_LocalPosition: {x: 7.39, y: -51.66, z: -1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -76575,9 +76719,10 @@ GameObject:
   - component: {fileID: 4166485943844679092}
   - component: {fileID: 6534996020642551618}
   - component: {fileID: 6952147299803429190}
+  - component: {fileID: 6952147299803429191}
   m_Layer: 0
   m_Name: EnemyDamager
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76593,9 +76738,10 @@ GameObject:
   - component: {fileID: 4166485943853153228}
   - component: {fileID: 6534996020651016506}
   - component: {fileID: 6952147299811864382}
+  - component: {fileID: 6952147299811864383}
   m_Layer: 0
   m_Name: EnemyDamager
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76985,6 +77131,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6952147299803429191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5337230949896090054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb18ec67ecc003847a002b8fa2e6d7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 6396974951714777570}
 --- !u!61 &6952147299811864382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -77030,6 +77189,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6952147299811864383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5337230949904394174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb18ec67ecc003847a002b8fa2e6d7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 6396974951739735962}
 --- !u!114 &7353641209242513109
 MonoBehaviour:
   m_ObjectHideFlags: 0

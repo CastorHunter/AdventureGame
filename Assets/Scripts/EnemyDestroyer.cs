@@ -16,6 +16,7 @@ public class EnemyDestroyer : MonoBehaviour
         if (other.CompareTag("Sword"))
         {
             Destroy(Enemy);
+            // Instantiate(ProjectilePrefab, gameObject.position, gameObject.rotation);
         }
     }
 }
