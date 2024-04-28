@@ -19,16 +19,19 @@ public class HeroicEnding : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
         {
+            Debug.Log("0");
             if (other.CompareTag("Sword"))
             {
+                Destroy(player);
+                player = GameObject.Find("DontDestroyTheItems");
+                Debug.Log("1");
                 Invoke("Restart", 7.0f);
                 player = GameObject.Find("Chien");
                 player.SetActive(false);
+                Debug.Log("2");
                 player = GameObject.Find("EndingPlayer");
                 player.GetComponent<Renderer>().enabled = true;
                 player = GameObject.Find("Player");
-                Destroy(player);
-                player = GameObject.Find("DontDestroyTheItems");
                 Destroy(player);
                 player = GameObject.Find("Menu Canvas To Save");
                 Destroy(player);

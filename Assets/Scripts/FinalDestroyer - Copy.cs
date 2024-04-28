@@ -8,10 +8,6 @@ public class FinalDestroyer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.CompareTag("Sword"))
-            {
                 Invoke("Restart", 7.0f);
                 player = GameObject.Find("Player");
                 Destroy(player);
@@ -27,12 +23,10 @@ public class FinalDestroyer : MonoBehaviour
                 Destroy(player);
                 player = GameObject.Find("Pray");
                 Destroy(player);
-            }
-        }
+    }
     void Restart()
         {
         player = GameObject.Find("AudioManager");
         Destroy(player);
         }
-    }
 }
