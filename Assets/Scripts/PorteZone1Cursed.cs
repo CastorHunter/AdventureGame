@@ -9,7 +9,7 @@ public class PorteZone1Cursed : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(21);
+            SceneManager.LoadScene(22);
         }
     }
 }

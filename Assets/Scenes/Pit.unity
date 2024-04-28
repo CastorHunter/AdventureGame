@@ -667,11 +667,10 @@ GameObject:
   m_Component:
   - component: {fileID: 214692092}
   - component: {fileID: 214692091}
-  - component: {fileID: 214692093}
   - component: {fileID: 214692094}
   m_Layer: 0
   m_Name: "\xE9chelle"
-  m_TagString: Untagged
+  m_TagString: Echelle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -743,18 +742,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &214692093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214692090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 811cf39549f645845a804aecbed4a480, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &214692094
 CircleCollider2D:
   m_ObjectHideFlags: 0

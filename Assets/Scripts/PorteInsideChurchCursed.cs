@@ -9,7 +9,7 @@ public class PorteInsideChurchCursed : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(20);
+            SceneManager.LoadScene(21);
         }
     }
 }

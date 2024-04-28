@@ -74,4 +74,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Zone1Cursed.unity
     guid: 3659a10d5eb14d04aa6ee8704cadb2b3
+  - enabled: 1
+    path: Assets/Scenes/HouseZoneCursed.unity
+    guid: ee4228c55869c1243ab9a66a5b18c976
   m_configObjects: {}

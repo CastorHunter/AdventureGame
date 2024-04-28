@@ -223,7 +223,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("Bateau"))
         {
             SceneManager.LoadScene(18);
-            transform.position = new Vector3(23,-73,-2);
+            transform.position = new Vector3(23,-76,-2);
         }
         if (other.CompareTag("GetSword"))
         {
@@ -263,6 +263,18 @@ public class PlayerMovement : MonoBehaviour
             ActualCheckPoint = other.gameObject;
             CheckpointLocation = ActualCheckPoint.transform.position;
             scene = 1;
+        }
+        if (other.CompareTag("Echelle"))
+        {
+            Debug.Log("aled");
+            if (hasSword == true)
+            {
+                SceneManager.LoadScene(23);
+            }
+            else
+            {
+                SceneManager.LoadScene(2);
+            }
         }
         if (other.CompareTag("Checkpoint2"))//Village
         {
