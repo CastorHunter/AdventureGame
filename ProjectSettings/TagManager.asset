@@ -21,6 +21,10 @@ TagManager:
   - Checkpoint5
   - Heart
   - Echelle
+  - Checkpoint6
+  - Checkpoint7
+  - Checkpoint8
+  - BloqueForPray
   layers:
   - Default
   - TransparentFX

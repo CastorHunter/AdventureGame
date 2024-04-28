@@ -22,9 +22,12 @@ public class PlayerMovement : MonoBehaviour
     // 3 : Zone3
     // 4 : KrysseTomb
     // 5 : Church
+    // 6 : VillageCursed
+    // 7 : ChurchCursed
+    // 8 : HouseZoneCursed
     private bool canFire = false;
     private bool hasSword = false;
-    private bool hasPray = true;
+    private bool hasPray = false;
     private bool hasWater = true;
     private bool Life = false;
     private bool GameMode = true;
@@ -40,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     private Image Inventory;
     private GameObject LifeSystem;
     private GameObject LifeBarTempo;
+    private GameObject bloquage;
     private Image LifeBar0;
     private Image LifeBar1;
     private Image LifeBar2;
@@ -258,15 +262,8 @@ public class PlayerMovement : MonoBehaviour
                 pv = 6;
             }
         }
-        if (other.CompareTag("Checkpoint1"))//HouseZone
-        {
-            ActualCheckPoint = other.gameObject;
-            CheckpointLocation = ActualCheckPoint.transform.position;
-            scene = 1;
-        }
         if (other.CompareTag("Echelle"))
         {
-            Debug.Log("aled");
             if (hasSword == true)
             {
                 SceneManager.LoadScene(23);
@@ -275,6 +272,20 @@ public class PlayerMovement : MonoBehaviour
             {
                 SceneManager.LoadScene(2);
             }
+        }
+        if (other.CompareTag("BloqueForPray"))
+        {
+            if (hasPray == true)
+            {
+                bloquage = GameObject.Find("BloquageForPray");
+                Destroy(bloquage);
+            }
+        }
+        if (other.CompareTag("Checkpoint1"))//HouseZone
+        {
+            ActualCheckPoint = other.gameObject;
+            CheckpointLocation = ActualCheckPoint.transform.position;
+            scene = 1;
         }
         if (other.CompareTag("Checkpoint2"))//Village
         {
@@ -300,7 +311,25 @@ public class PlayerMovement : MonoBehaviour
             CheckpointLocation = ActualCheckPoint.transform.position;
             scene = 5;
         }
-        if (other.CompareTag("Heart"))//Church
+        if (other.CompareTag("Checkpoint6"))//VillageCursed
+        {
+            ActualCheckPoint = other.gameObject;
+            CheckpointLocation = ActualCheckPoint.transform.position;
+            scene = 6;
+        }
+        if (other.CompareTag("Checkpoint7"))//ChurchCursed
+        {
+            ActualCheckPoint = other.gameObject;
+            CheckpointLocation = ActualCheckPoint.transform.position;
+            scene = 7;
+        }
+        if (other.CompareTag("Checkpoint8"))//HouseZoneCursed
+        {
+            ActualCheckPoint = other.gameObject;
+            CheckpointLocation = ActualCheckPoint.transform.position;
+            scene = 8;
+        }
+        if (other.CompareTag("Heart"))
         {
             pv = 6;
         }
@@ -333,6 +362,18 @@ public class PlayerMovement : MonoBehaviour
         if(scene == 5)//Church
         {
             SceneManager.LoadScene(5);
+        }
+        if(scene == 6)//VillageCursed
+        {
+            SceneManager.LoadScene(18);
+        }
+        if(scene == 7)//ChurchCursed
+        {
+            SceneManager.LoadScene(20);
+        }
+        if(scene == 8)//HouseZoneCursed
+        {
+            SceneManager.LoadScene(23);
         }
         transform.position = CheckpointLocation;
     }
