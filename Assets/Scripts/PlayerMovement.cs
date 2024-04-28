@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     private GameObject LifeSystem;
     private GameObject LifeBarTempo;
     private GameObject bloquage;
+    private GameObject musique;
     private Image LifeBar0;
     private Image LifeBar1;
     private Image LifeBar2;
@@ -228,6 +229,10 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene(18);
             transform.position = new Vector3(23,-76,-2);
+            musique = GameObject.Find("Ambiance");
+            musique.SetActive(false);
+            musique = GameObject.Find("CursedWorld");
+            musique.GetComponent<AudioSource>().enabled = true;
         }
         if (other.CompareTag("GetSword"))
         {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HeroicEnding : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class HeroicEnding : MonoBehaviour
         {
             if (other.CompareTag("Sword"))
             {
+                Invoke("Restart", 7.0f);
                 player = GameObject.Find("Chien");
                 player.SetActive(false);
                 player = GameObject.Find("EndingPlayer");
@@ -28,14 +30,21 @@ public class HeroicEnding : MonoBehaviour
                 Destroy(player);
                 player = GameObject.Find("DontDestroyTheItems");
                 Destroy(player);
-                player = GameObject.Find("AudioManager");
-                Destroy(player);
                 player = GameObject.Find("Menu Canvas To Save");
                 Destroy(player);
                 player = GameObject.Find("IconesCanvas");
                 Destroy(player);
+                player = GameObject.Find("SwordCenter");
+                Destroy(player);
                 player = GameObject.Find("LifeSystem");
+                Destroy(player);
+                player = GameObject.Find("Pray");
                 Destroy(player);
             }
         }
+    void Restart()
+    {
+        player = GameObject.Find("AudioManager");
+        Destroy(player);
+    }
 }
