@@ -43945,6 +43945,7 @@ GameObject:
   - component: {fileID: 1373340738}
   - component: {fileID: 1373340737}
   - component: {fileID: 1373340739}
+  - component: {fileID: 1373340740}
   m_Layer: 0
   m_Name: "Je suis si fi\xE8re que tu sois devenu un pr\xEAtre mais fais attention
     \xE0 toi"
@@ -44055,6 +44056,19 @@ CircleCollider2D:
   m_Offset: {x: -0.0012438046, y: 0.07077013}
   serializedVersion: 2
   m_Radius: 1.0864338
+--- !u!114 &1373340740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373340736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ec3eaaf5a32674e811058f977ea769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0
 --- !u!1 &1598353483
 GameObject:
   m_ObjectHideFlags: 0

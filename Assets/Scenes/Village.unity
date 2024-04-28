@@ -62429,6 +62429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1398230995}
   - component: {fileID: 1398230994}
+  - component: {fileID: 1398230996}
   m_Layer: 0
   m_Name: "pnj bienvenue \xE0 la mairie"
   m_TagString: Untagged
@@ -62477,7 +62478,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e015670670a1d514aa82508dc933eb24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -62496,13 +62497,48 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398230993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.09, y: -43.82, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.70426834, w: -0.709934}
+  m_LocalPosition: {x: 1.08, y: -43.74, z: -1}
+  m_LocalScale: {x: 0.4527, y: 0.4527, z: 0.4527}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.541}
+--- !u!58 &1398230996
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398230993}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.000059001115, y: -0.0073636416}
+  serializedVersion: 2
+  m_Radius: 1.0876957
 --- !u!1 &1442309356
 GameObject:
   m_ObjectHideFlags: 0
@@ -64342,6 +64378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1717032741}
   - component: {fileID: 1717032740}
+  - component: {fileID: 1717032742}
   m_Layer: 0
   m_Name: "pnj qui commente la m\xE9t\xE9o"
   m_TagString: Untagged
@@ -64390,7 +64427,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c870c4f55f3dec6499e1dfc967ca104b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -64409,13 +64446,48 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717032739}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.19, y: -50.84, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9016128, w: -0.43254417}
+  m_LocalPosition: {x: 34.14, y: -50.87, z: -1}
+  m_LocalScale: {x: 0.4862, y: 0.4862, z: 0.4862}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -128.742}
+--- !u!58 &1717032742
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717032739}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0067071654, y: -0.00835942}
+  serializedVersion: 2
+  m_Radius: 1.0511597
 --- !u!1 &1726996290
 GameObject:
   m_ObjectHideFlags: 0
@@ -65092,13 +65164,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829271306}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -58.040005, y: 152.16, z: -2}
-  m_LocalScale: {x: 1.0738599, y: 1.0738599, z: 1.0738599}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7184912, w: 0.6955361}
+  m_LocalPosition: {x: -0.069999695, y: -0.070007324, z: -1}
+  m_LocalScale: {x: 0.65720224, y: 0.65720224, z: 0.65720224}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4977959421183740517}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 91.86}
 --- !u!114 &1829271308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65111,7 +65183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ec3eaaf5a32674e811058f977ea769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 0
+  offset: -90
 --- !u!212 &1829271309
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -65153,7 +65225,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8ffe48b7e09d0e43a45dfd769392dae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -67914,8 +67986,8 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 4166485944346424697}
   - {fileID: 1829271307}
+  - {fileID: 4166485944346424697}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5141955014980160369

@@ -59,4 +59,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InsideChurch.unity
     guid: abd6c809ba65ac142b3becf68b5d37a1
+  - enabled: 1
+    path: Assets/Scenes/VillageCursed.unity
+    guid: e7652c28b872b264d895fd5735bafba4
+  - enabled: 1
+    path: Assets/Scenes/Zone2Cursed.unity
+    guid: 872abce14d954334c9e059e6f2db62e5
+  - enabled: 1
+    path: Assets/Scenes/ChurchCursed.unity
+    guid: c978f8765d6a87a44ab842aefad4a882
+  - enabled: 1
+    path: Assets/Scenes/InsideChurchCursed.unity
+    guid: 4b3caff40269a124b96aa06caf24898f
+  - enabled: 1
+    path: Assets/Scenes/Zone1Cursed.unity
+    guid: 3659a10d5eb14d04aa6ee8704cadb2b3
   m_configObjects: {}

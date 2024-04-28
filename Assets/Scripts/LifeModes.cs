@@ -5,6 +5,7 @@ using UnityEngine;
 public class LifeModes : MonoBehaviour
 {
     public GameObject otherMode;
+    public GameObject RealMode;
     public GameObject otherControl;
     public GameObject LifeBar;
     public bool LifeMode = false;
@@ -24,6 +25,7 @@ public class LifeModes : MonoBehaviour
         if (Input.GetKey("q"))
         {
             otherMode.SetActive(false);
+            RealMode.SetActive(true);
             LifeBar.SetActive(false);
             LifeMode = false;
         }
@@ -31,6 +33,7 @@ public class LifeModes : MonoBehaviour
         if (Input.GetKey("e"))
         {
             otherMode.SetActive(true);
+            RealMode.SetActive(false);
             LifeBar.SetActive(true);
             LifeMode = true;
         }

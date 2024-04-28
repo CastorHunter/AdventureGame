@@ -39,9 +39,11 @@ public class PlayerMovement : MonoBehaviour
     public Image InventorywithWater;
     private Image Inventory;
     private GameObject LifeSystem;
-    private GameObject LifeBar1;
-    private GameObject LifeBar2;
-    private GameObject LifeBar3;
+    private GameObject LifeBarTempo;
+    private Image LifeBar0;
+    private Image LifeBar1;
+    private Image LifeBar2;
+    private Image LifeBar3;
     public Image HandsIcone;
     public Image PrayIcone;
     public Image SwordIcone;
@@ -59,15 +61,20 @@ public class PlayerMovement : MonoBehaviour
         DontDestroyOnLoad(this);
         ChangeNothing();
         SwordLook.SetActive(false);
-        LifeBar1 = GameObject.Find("Life1/3");
-        LifeBar2 = GameObject.Find("Life2/3");
-        LifeBar3 = GameObject.Find("Life3/3");
         LifeSystem = GameObject.Find("LifeSystem");
         Inventory = InventoryEmpty;//porte de Shar T-T
         LifeModes life = LifeSystem.GetComponent<LifeModes>(); // Obtient une référence au script de la gestion de points de vie
         Life = life.LifeMode;
         LifeModes gamemode = LifeSystem.GetComponent<LifeModes>();
         GameMode = gamemode.Clavier;
+        LifeBarTempo = GameObject.Find("Life1/3");
+        LifeBar1 = LifeBarTempo.GetComponent<Image>();
+        LifeBarTempo = GameObject.Find("Life2/3");
+        LifeBar2 = LifeBarTempo.GetComponent<Image>();
+        LifeBarTempo = GameObject.Find("Life3/3");
+        LifeBar3 = LifeBarTempo.GetComponent<Image>();
+        LifeBarTempo = GameObject.Find("LifeEmpty");
+        LifeBar0 = LifeBarTempo.GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -123,6 +130,10 @@ public class PlayerMovement : MonoBehaviour
         }
         //Debug.Log(change); //pour debug
 
+        if(Input.GetButtonDown("Fire1") && canFire == true){
+            audioSource.PlayOneShot(WaterSplash, 0.7F);
+            Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
+        }
         if (GameMode == true)
         {
         Vector3 displacement = weapon.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -141,28 +152,27 @@ public class PlayerMovement : MonoBehaviour
             swordcenter.rotation = weapon.rotation;
         }
 
-
-        if(Input.GetButtonDown("Fire1") && canFire == true){
-            audioSource.PlayOneShot(WaterSplash, 0.7F);
-            Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
-        }
         if(pv == 6)
         {
-            LifeBar1.SetActive(true);
-            LifeBar2.SetActive(true);
-            LifeBar3.SetActive(true);
+            LifeBar3.enabled = true;
+            LifeBar0.enabled = false;
+            LifeBar2.enabled = false;
+            LifeBar1.enabled = false;
         }
-        if(pv < 6)
+        if(pv < 6 && pv > 3)
         {
-            LifeBar3.SetActive(false);
+            LifeBar2.enabled = true;
+            LifeBar3.enabled = false;
         }
-        if(pv < 4)
+        if(pv < 4 && pv > 1)
         {
-            LifeBar2.SetActive(false);
+            LifeBar1.enabled = true;
+            LifeBar2.enabled = false;
         }
         if(pv < 2)
         {
-            LifeBar1.SetActive(false);
+            LifeBar0.enabled = true;
+            LifeBar1.enabled = false;
         }
     }
     void MoveCharacter()
@@ -210,6 +220,11 @@ public class PlayerMovement : MonoBehaviour
         {
             speed = 0.01F;
         }
+        if (other.CompareTag("Bateau"))
+        {
+            SceneManager.LoadScene(18);
+            transform.position = new Vector3(23,-73,-2);
+        }
         if (other.CompareTag("GetSword"))
         {
             SwordIcone.enabled = true;
@@ -231,7 +246,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (other.CompareTag("Enemy"))
         {
-            if (Life == true && pv > 0)
+            if (Life == true && pv >= 0)
             {
                 this.GetComponent<Collider2D>().enabled = false;
                 pv = pv -1;
