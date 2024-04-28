@@ -56213,7 +56213,6 @@ GameObject:
   - component: {fileID: 164542248}
   - component: {fileID: 164542247}
   - component: {fileID: 164542246}
-  - component: {fileID: 164542245}
   - component: {fileID: 164542244}
   m_Layer: 5
   m_Name: Dialog (9)
@@ -56234,19 +56233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aaa0fd4a4301c54888bd58bcaebb0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &164542245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164542243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ec3eaaf5a32674e811058f977ea769, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: -90
 --- !u!61 &164542246
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56643,7 +56629,6 @@ GameObject:
   - component: {fileID: 245667562}
   - component: {fileID: 245667561}
   - component: {fileID: 245667560}
-  - component: {fileID: 245667563}
   - component: {fileID: 245667559}
   m_Layer: 5
   m_Name: Dialog (8)
@@ -56776,19 +56761,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &245667563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245667558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ec3eaaf5a32674e811058f977ea769, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: -90
 --- !u!1 &260549407
 GameObject:
   m_ObjectHideFlags: 0
@@ -57060,7 +57032,6 @@ GameObject:
   - component: {fileID: 330002986}
   - component: {fileID: 330002985}
   - component: {fileID: 330002984}
-  - component: {fileID: 330002983}
   - component: {fileID: 330002982}
   m_Layer: 5
   m_Name: Dialog (12)
@@ -57081,19 +57052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aaa0fd4a4301c54888bd58bcaebb0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &330002983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330002981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ec3eaaf5a32674e811058f977ea769, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: -90
 --- !u!61 &330002984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -59586,7 +59544,6 @@ GameObject:
   - component: {fileID: 823706598}
   - component: {fileID: 823706597}
   - component: {fileID: 823706596}
-  - component: {fileID: 823706595}
   - component: {fileID: 823706594}
   m_Layer: 5
   m_Name: Dialog (10)
@@ -59607,19 +59564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aaa0fd4a4301c54888bd58bcaebb0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &823706595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823706593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ec3eaaf5a32674e811058f977ea769, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: -90
 --- !u!61 &823706596
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -61979,7 +61923,6 @@ GameObject:
   - component: {fileID: 1368983478}
   - component: {fileID: 1368983477}
   - component: {fileID: 1368983476}
-  - component: {fileID: 1368983475}
   - component: {fileID: 1368983474}
   m_Layer: 5
   m_Name: Dialog (11)
@@ -62000,19 +61943,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aaa0fd4a4301c54888bd58bcaebb0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1368983475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368983473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ec3eaaf5a32674e811058f977ea769, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: -90
 --- !u!61 &1368983476
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63062,7 +62992,6 @@ GameObject:
   - component: {fileID: 1551897895}
   - component: {fileID: 1551897894}
   - component: {fileID: 1551897893}
-  - component: {fileID: 1551897892}
   - component: {fileID: 1551897891}
   m_Layer: 5
   m_Name: Dialog (13)
@@ -63083,19 +63012,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aaa0fd4a4301c54888bd58bcaebb0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1551897892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551897890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ec3eaaf5a32674e811058f977ea769, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: -90
 --- !u!61 &1551897893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63599,7 +63515,6 @@ GameObject:
   - component: {fileID: 1615996709}
   - component: {fileID: 1615996708}
   - component: {fileID: 1615996707}
-  - component: {fileID: 1615996706}
   - component: {fileID: 1615996705}
   m_Layer: 5
   m_Name: Dialog (14)
@@ -63620,19 +63535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aaa0fd4a4301c54888bd58bcaebb0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1615996706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1615996704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ec3eaaf5a32674e811058f977ea769, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: -90
 --- !u!61 &1615996707
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63756,7 +63658,6 @@ GameObject:
   - component: {fileID: 1628411808}
   - component: {fileID: 1628411807}
   - component: {fileID: 1628411806}
-  - component: {fileID: 1628411805}
   - component: {fileID: 1628411804}
   m_Layer: 5
   m_Name: Dialog (15)
@@ -63777,19 +63678,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aaa0fd4a4301c54888bd58bcaebb0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1628411805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628411803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ec3eaaf5a32674e811058f977ea769, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: -90
 --- !u!61 &1628411806
 BoxCollider2D:
   m_ObjectHideFlags: 0
