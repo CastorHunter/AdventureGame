@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canFire = false;
     private bool hasSword = false;
     private bool hasPray = false;
-    private bool hasWater = true;
+    private bool hasWater = false;
     private bool Life = false;
     private bool GameMode = true;
     private int pv = 6;
